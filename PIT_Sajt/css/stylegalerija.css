@@ -1,0 +1,148 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #f5c518; 
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.glassy-navbar,
+footer {
+  background-color: #000;
+  color: #f5c518;
+  box-shadow: 0 2px 10px rgba(245, 197, 24, 0.2);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: #f5c518 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #f5c518 !important;
+}
+
+
+.navbar-toggler {
+  border-color: rgba(245, 197, 24, 0.5);
+}
+
+@keyframes rotate-logo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#rotatingLogo {
+  transition: transform 1s ease, filter 1s ease;
+}
+
+
+
+.galerija {
+  flex: 1 0 auto; 
+  padding-top: 120px;
+  background-color: #1a1a1a;
+}
+
+/* Naslovi u galeriji */
+.galerija h1,
+.galerija h2 {
+  color: #f5c518;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border: 2px solid #f5c518;
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(248, 196, 9, 0.8);
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #f5c518;
+}
+
+footer p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+footer a {
+  color: #f5c518;
+  transition: color 0.3s ease;
+  margin-right: 12px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.nav-item.d-flex img {
+  border-radius: 3px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item.d-flex img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+  .galerija {
+    padding-top: 180px !important;
+  }
+}
+.galerija {
+    padding-top: 180px !important;
+  }
+  .navbar-brand {
+  color: #f5c518 !important;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #fff !important; 
+  text-decoration: none;
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 1s ease-out forwards;
+}
+ .nav-link.active {
+  color: #d4af37 !important;
+  font-weight: 700;
+  border-bottom: 2px solid #d4af37;
+}
